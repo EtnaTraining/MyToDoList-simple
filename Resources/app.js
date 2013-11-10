@@ -17,25 +17,24 @@ var win1 = Titanium.UI.createWindow({
 
 var titleView = Ti.UI.createView({
 	//borderWidth: 1,
-	top: 10,
+	top: "10dp",
 	width: "95%",
-	height: 50
+	height: "50dp"
 });
 
 win1.add(titleView);
 
 var titleLbl = Ti.UI.createLabel({
-	left: 5,
+	left: "5dp",
 	text: "Titolo",
-	width: "auto",
-	height: "auto"
+	color: "black"
 });
 
 var titleTxt = Ti.UI.createTextField({
 	hintText: "Inserisci una todo",
-	right: 5,
-	height: 45,
-	right:5,
+	right: "5dp",
+	height: "45dp",
+	right: "5dp",
 	left: "85dp",
 	font: {fontSize: "14dp"},
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
@@ -46,26 +45,25 @@ titleView.add(titleTxt);
 
 var locationView = Ti.UI.createView({
 	//borderWidth: 1,
-	top: 20,
+	top: "20dp",
 	width: "95%",
-	height: 50
+	height: "50dp"
 });
 
 win1.add(locationView);
 
 var locationLbl = Ti.UI.createLabel({
-	left: 5,
+	left: "5dp",
 	text: "Location",
-	width: "auto",
-	height: "auto"
+	color: "black"
 });
 
 var locationTxt = Ti.UI.createTextField({
 	hintText: "inserire una location",
 	//right: 5,
-	height: 45,
+	height: "45dp",
 	left: "85dp",
-	width: 180,
+	width: "180dp",
 	font: {fontSize: "14dp"},
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
 	//borderWidth: 1
@@ -76,18 +74,17 @@ locationView.add(locationTxt);
 
 var alarmView = Ti.UI.createView({
 	//borderWidth: 1,
-	top: 20,
+	top: "20dp",
 	width: "95%",
-	height: 40
+	height: "50dp"
 });
 
 win1.add(alarmView);
 
 var alarmLbl = Ti.UI.createLabel({
-	left: 5,
+	left: "5dp",
 	text: "Allarme",
-	width: "auto",
-	height: "auto"
+	color: "black"
 });
 
 var alarmSwitch = Ti.UI.createSwitch({
@@ -100,26 +97,25 @@ alarmView.add(alarmSwitch);
 
 var dueDateView = Ti.UI.createView({
 	//borderWidth: 1,
-	top: 20,
+	top: "20dp",
 	width: "95%",
-	height: 50
+	height: "50dp"
 });
 
 win1.add(dueDateView);
 
 var dueDateLbl = Ti.UI.createLabel({
-	left: 5,
+	left: "5dp",
 	text: "Scadenza",
-	width: "auto",
-	height: "auto"
+	color: "black"
 });
 
 var dueDateBtn = Ti.UI.createButton({
 	title: "Oggi",
-	right: 5,
+	right: "5dp",
 	left: "85dp",
-	height: 40,
-	width: 150,
+	height: "40dp",
+	width: "150dp",
 });
 
 dueDateView.add(dueDateLbl);
@@ -127,9 +123,9 @@ dueDateView.add(dueDateBtn);
 
 
 var addToDoBtn = Ti.UI.createButton({
-	width: 180,
-	height: 60,
-	top: 15,
+	width: "180dp",
+	height: "60dp",
+	top: "15dp",
 	title: "Aggiungi ToDO"
 })
 
@@ -145,14 +141,14 @@ var picker = Ti.UI.createPicker({
 	maxDate: new Date(2014,11,31),
 	value: new Date(),
 	type: Ti.UI.PICKER_TYPE_DATE,
-	top: 80
+	top: "80dp"
 });
 
 var closeWinBtn = Ti.UI.createButton({
 	title: "Chiudi",
-	top: 10,
-	height: 40,
-	width: 100
+	top: "10dp",
+	height: "40dp",
+	width: "100dp"
 })
 
 selectDateWin.add(closeWinBtn);
@@ -173,6 +169,7 @@ closeWinBtn.addEventListener('click', function() {
 
 
 dueDateBtn.addEventListener('click', function() {
+
 	selectDateWin.open({modal:true});
 })
 
@@ -201,11 +198,17 @@ addToDoBtn.addEventListener('click', function() {
 		title: titleTxt.value,
 		location: locationTxt.value,
 		alarm: alarmSwitch.value,
-		dueDate: dueDateBtn.title,
-		hasChild: true
+		dueDate: dueDateBtn.title
 	};
+	todo.hasChild = true;
+	todo.color = "black";
+	todo.height = "60dp";
 	todolist.push(todo);
 	tv.data = todolist;
+	titleTxt.value = "";
+	locationTxt.value = "";
+	alarmSwitch.value = false;
+	dueDateBtn.title = "Oggi";
 	//tv.appendRow(todo);
 	tabGroup.setActiveTab(1);
 	

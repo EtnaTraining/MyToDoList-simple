@@ -8,12 +8,12 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <sdk-version>2.1.3.GA</sdk-version>
-    <id>it.etnatraining.mytodolistmilano</id>
-    <name>MyToDoListMilano</name>
+    <sdk-version>3.1.3.GA</sdk-version>
+    <id>it.etnatraining.mytodolistsimple</id>
+    <name>MyToDoListSimple</name>
     <version>1.0</version>
-    <publisher>etna</publisher>
-    <url>http://</url>
+    <publisher>etnatraining</publisher>
+    <url>http://www.etnatraining.it</url>
     <description>not specified</description>
     <copyright>2012 by etna</copyright>
     <icon>appicon.png</icon>
