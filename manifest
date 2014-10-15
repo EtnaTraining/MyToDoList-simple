@@ -1,8 +1,8 @@
-#appname: MyToDoListSimple
-#publisher: etnatraining
-#url: http://
-#image: appicon.png
-#appid: it.etnatraining.mytodolistsimple
-#desc: undefined
-#type: ipad
-#guid: 8d2fb875-dddd-4997-b840-b5f2ce37fc89
+#appname:MyToDoListSimple
+#publisher:etnatraining
+#url:http://www.etnatraining.it
+#image:appicon.png
+#appid:it.etnatraining.mytodolistsimple
+#desc:not specified
+#type:ipad
+#guid:8d2fb875-dddd-4997-b840-b5f2ce37fc89

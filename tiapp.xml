@@ -8,14 +8,14 @@
         <target device="android">true</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <sdk-version>3.1.3.GA</sdk-version>
+    <sdk-version>3.4.0.GA</sdk-version>
     <id>it.etnatraining.mytodolistsimple</id>
     <name>MyToDoListSimple</name>
     <version>1.0</version>
     <publisher>etnatraining</publisher>
     <url>http://www.etnatraining.it</url>
     <description>not specified</description>
-    <copyright>2012 by etna</copyright>
+    <copyright>2012 by etnatraining</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>
@@ -25,7 +25,7 @@
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
     <guid>8d2fb875-dddd-4997-b840-b5f2ce37fc89</guid>
-    <property name="ti.ui.defaultunit">system</property>
+    <property name="ti.ui.defaultunit">dp</property>
     <iphone>
         <orientations device="iphone">
             <orientation>Ti.UI.PORTRAIT</orientation>

@@ -127,7 +127,7 @@ var addToDoBtn = Ti.UI.createButton({
 	height: "60dp",
 	top: "15dp",
 	title: "Aggiungi ToDO"
-})
+});
 
 win1.add(addToDoBtn);
 
@@ -141,7 +141,8 @@ var picker = Ti.UI.createPicker({
 	maxDate: new Date(2014,11,31),
 	value: new Date(),
 	type: Ti.UI.PICKER_TYPE_DATE,
-	top: "80dp"
+	top: "80dp",
+	backgroundColor: "black"
 });
 
 var closeWinBtn = Ti.UI.createButton({
@@ -149,7 +150,7 @@ var closeWinBtn = Ti.UI.createButton({
 	top: "10dp",
 	height: "40dp",
 	width: "100dp"
-})
+});
 
 selectDateWin.add(closeWinBtn);
 selectDateWin.add(picker);
@@ -171,7 +172,7 @@ closeWinBtn.addEventListener('click', function() {
 dueDateBtn.addEventListener('click', function() {
 
 	selectDateWin.open({modal:true});
-})
+});
 
 
 var tab1 = Titanium.UI.createTab({  
